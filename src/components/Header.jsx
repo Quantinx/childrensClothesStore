@@ -1,6 +1,8 @@
-import Cart from "./Cart";
+import { usePopup } from '../providers/useCartPopup'
 
 export default function Header() {
+  const { togglePopup } = usePopup();
+
   return (
     <>
       <div
@@ -11,7 +13,7 @@ export default function Header() {
         }}
       >
         <h1>EXAMPLE SITE NAME</h1>
-        <Cart />
+        <button onClick={togglePopup}>Cart</button>
       </div>
     </>
   );
