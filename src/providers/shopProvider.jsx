@@ -1,5 +1,6 @@
-import { useState, useContext, createContext } from "react";
+import { useState, createContext } from "react";
 import data from "../data.json";
+
 const clothes = data.clothes;
 
 export const ShopProviderContext = createContext();

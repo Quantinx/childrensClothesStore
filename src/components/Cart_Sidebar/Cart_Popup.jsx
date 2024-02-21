@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePopup } from '../../providers/useCartPopup';
-import './Cart_Popup.css'; // Import CSS file for styling
+import './Cart_Popup.css';
 
 const Popup = () => {
   const { isOpen, togglePopup } = usePopup();
