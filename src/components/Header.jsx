@@ -1,7 +1,10 @@
-import { usePopup } from '../providers/useCartPopup'
+import { usePopup } from "../providers/useCartPopup";
+import { ShopProviderContext } from "../providers/shopProvider";
+import { useContext } from "react";
 
 export default function Header() {
   const { togglePopup } = usePopup();
+  const { totalItems } = useContext(ShopProviderContext);
 
   return (
     <>
@@ -13,7 +16,7 @@ export default function Header() {
         }}
       >
         <h1>EXAMPLE SITE NAME</h1>
-        <button onClick={togglePopup}>Cart</button>
+        <button onClick={togglePopup}>{totalItems} Cart</button>
       </div>
     </>
   );

@@ -61,12 +61,16 @@ export const ShopProvider = ({ children }) => {
     setCart([]);
   };
 
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+  console.log(totalItems);
+
   const value = {
     products,
     addToCart,
     cart,
     removeItem,
     clearCart,
+    totalItems,
   };
 
   return (
