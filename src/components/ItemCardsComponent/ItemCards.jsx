@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ShopProviderContext } from "../../providers/ShopProvider";
 import addToCart from "../../helpers/addToCart";
 import "./ItemCards.css";
+import { Button } from "@chakra-ui/react";
 
 export default function ItemCards({ product }) {
   const { cartItems, setCartItems } = useContext(ShopProviderContext);
@@ -17,7 +18,7 @@ export default function ItemCards({ product }) {
     }).isRequired,
   };
 
-  function handleClick() {
+  function onAdd() {
     const newCart = addToCart(product.id, 1, cartItems);
     setCartItems(newCart);
   }
@@ -32,8 +33,19 @@ export default function ItemCards({ product }) {
         width={200}
       ></img>
       <div>{product.description}</div>
-      <div>{product.price}</div>
-      <button onClick={handleClick}>Add to Cart</button>
+      <div className="price-button">
+        {product.price}
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            onAdd(product.id);
+          }}
+          colorScheme="teal"
+          size="md"
+        >
+          BUY
+        </Button>
+      </div>
     </article>
   );
 }

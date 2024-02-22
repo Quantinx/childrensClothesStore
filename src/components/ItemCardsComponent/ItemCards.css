@@ -8,3 +8,9 @@
   align-items: center;
   text-align: center;
 }
+.price-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
