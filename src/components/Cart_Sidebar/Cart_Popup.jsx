@@ -11,6 +11,10 @@ const Popup = () => {
     removeItem(id);
   };
 
+  const totalPrice = cart
+    .reduce((total, item) => total + parseFloat(item.totalPrice), 0)
+    .toFixed(2);
+
   return (
     <div className={`popup ${isOpen ? "open" : ""}`}>
       <button className="close-btn" onClick={togglePopup}>
@@ -22,7 +26,7 @@ const Popup = () => {
         </div>
         <div>
           <ul>
-            {cart.map(({ id, name, price, quantity, totalPrice }) => (
+            {cart.map(({ id, name, quantity, totalPrice }) => (
               <li key={id}>
                 {quantity} x {name}= {`${totalPrice} SEK`}{" "}
                 <button onClick={() => handleRemoveItem(id)}>
@@ -33,7 +37,7 @@ const Popup = () => {
           </ul>
         </div>
         <div>
-          <p>total price:</p>
+          <p>Total price: {totalPrice} SEK</p>
         </div>
 
         <div>

@@ -36,9 +36,6 @@ export const ShopProvider = ({ children }) => {
         updatedCart[itemIndex].quantity * parsedPrice
       ).toFixed(2);
       setCart(updatedCart);
-      console.log(
-        `Quantity of item ${itemId} increased to ${updatedCart[itemIndex].quantity}`
-      );
     } else {
       const newItem = {
         id: itemId,
@@ -48,7 +45,6 @@ export const ShopProvider = ({ children }) => {
         totalPrice: parsedPrice.toFixed(2),
       };
       setCart([...cart, newItem]);
-      console.log(`Item ${itemId} added to cart`);
     }
   };
 
@@ -62,7 +58,6 @@ export const ShopProvider = ({ children }) => {
   };
 
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-  console.log(totalItems);
 
   const value = {
     products,
