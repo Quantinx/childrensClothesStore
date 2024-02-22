@@ -1,18 +1,25 @@
 import "./App.css";
-import { useContext } from "react";
-import { ShopProviderContext } from "./providers/shopProvider";
-import Header from "./components/Header";
-import Shop from "./pages/Shop";
+import { Routes, Route } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import Header from "./components/HeaderComponent/Header";
+import Shop from "./pages/ShopPage/Shop";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 import Popup from './components/Cart_Sidebar/Cart_Popup'
 
 function App() {
-  const { products, cartItems } = useContext(ShopProviderContext);
   return (
     <>
       <Header />
       <Shop />
       <Popup/>
+      <ChakraProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Shop />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+        </Routes>
+      </ChakraProvider>
     </>
   );
 }
