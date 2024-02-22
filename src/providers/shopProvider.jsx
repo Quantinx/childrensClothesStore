@@ -26,12 +26,20 @@ export const ShopProvider = ({ children }) => {
     if (itemIndex !== -1) {
       const updatedCart = [...cart];
       updatedCart[itemIndex].quantity += 1;
+      updatedCart[itemIndex].totalPrice =
+        updatedCart[itemIndex].quantity * price; // Update totalPrice
       setCart(updatedCart);
       console.log(
         `Quantity of item ${itemId} increased to ${updatedCart[itemIndex].quantity}`
       );
     } else {
-      const newItem = { id: itemId, name: name, price: price, quantity: 1 }; // Include name and price in the newItem object
+      const newItem = {
+        id: itemId,
+        name: name,
+        price: price,
+        quantity: 1,
+        totalPrice: price,
+      }; // Include totalPrice
       setCart([...cart, newItem]);
       console.log(`Item ${itemId} added to cart`);
     }
