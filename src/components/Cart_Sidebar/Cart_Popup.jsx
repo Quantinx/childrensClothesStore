@@ -5,8 +5,12 @@ import "./Cart_Popup.css";
 
 const Popup = () => {
   const { isOpen, togglePopup } = usePopup();
-  const { cart } = useContext(ShopProviderContext);
-  console.log(cart);
+  const { cart, removeItem } = useContext(ShopProviderContext);
+
+  const handleRemoveItem = (id) => {
+    removeItem(id);
+  };
+
   return (
     <div className={`popup ${isOpen ? "open" : ""}`}>
       <button className="close-btn" onClick={togglePopup}>
@@ -21,7 +25,9 @@ const Popup = () => {
             {cart.map(({ id, name, price, quantity, totalPrice }) => (
               <li key={id}>
                 {quantity} : {name}= {`${totalPrice} SEK`}{" "}
-                <button>remove</button>
+                <button onClick={() => handleRemoveItem(id)}>
+                  Remove Item
+                </button>
               </li>
             ))}
           </ul>

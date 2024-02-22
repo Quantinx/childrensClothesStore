@@ -22,12 +22,18 @@ export const ShopProvider = ({ children }) => {
 
   const addToCart = (itemId, name, price) => {
     const itemIndex = cart.findIndex((item) => item.id === itemId);
+    const parsedPrice = parseFloat(price);
+
+    if (isNaN(parsedPrice)) {
+      console.error(`Invalid price: ${price}`);
+      return;
+    }
 
     if (itemIndex !== -1) {
       const updatedCart = [...cart];
       updatedCart[itemIndex].quantity += 1;
       updatedCart[itemIndex].totalPrice = (
-        updatedCart[itemIndex].quantity * price
+        updatedCart[itemIndex].quantity * parsedPrice
       ).toFixed(2);
       setCart(updatedCart);
       console.log(
@@ -37,9 +43,9 @@ export const ShopProvider = ({ children }) => {
       const newItem = {
         id: itemId,
         name: name,
-        price: price,
+        price: parsedPrice,
         quantity: 1,
-        totalPrice: price.toFixed(2),
+        totalPrice: parsedPrice.toFixed(2),
       };
       setCart([...cart, newItem]);
       console.log(`Item ${itemId} added to cart`);
