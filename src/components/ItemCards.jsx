@@ -1,14 +1,13 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ShopProviderContext } from "../providers/shopProvider";
-import addToCart from "../helpers/addToCart";
 
 export default function ItemCards({ product }) {
-  const { cartItems, setCartItems } = useContext(ShopProviderContext);
+  const { addToCart } = useContext(ShopProviderContext);
 
-  function handleClick() {
-    const newCart = addToCart(product.id, 1, cartItems);
-    setCartItems(newCart);
-  }
+  const handleClick = () => {
+    addToCart(product.id);
+  };
+
   return (
     <article style={{ border: "solid", width: "20rem", height: "25rem" }}>
       <h3>{product.name}</h3>

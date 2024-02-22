@@ -1,18 +1,18 @@
-import { useState, createContext } from "react";
+import React, { useState, createContext, useContext } from "react";
 import data from "../data.json";
-
 const clothes = data.clothes;
 
 export const ShopProviderContext = createContext();
-
 export const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState(clothes);
-  const [cartItems, setCartItems] = useState(0);
+
+  const addToCart = (itemId) => {
+    console.log(`item ${itemId} added to cart`);
+  };
+
   const value = {
     products,
-    setProducts,
-    cartItems,
-    setCartItems,
+    addToCart,
   };
 
   return (

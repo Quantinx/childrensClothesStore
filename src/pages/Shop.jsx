@@ -3,7 +3,7 @@ import ItemCards from "../components/ItemCards";
 import { ShopProviderContext } from "../providers/shopProvider";
 
 export default function Shop() {
-  const { products, setCartItems } = useContext(ShopProviderContext);
+  const { products } = useContext(ShopProviderContext);
 
   return (
     <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
