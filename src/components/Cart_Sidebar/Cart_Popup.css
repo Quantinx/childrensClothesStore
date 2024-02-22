@@ -1,8 +1,13 @@
+*{
+  list-style: none;
+}
+
+
 .popup {
     position: fixed;
     top: 0;
-    right: -300px; /* Adjust as needed */
-    width: 300px; /* Adjust as needed */
+    right: -500px; /* Adjust as needed */
+    width: 500px; /* Adjust as needed */
     height: 100%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
