@@ -5,7 +5,7 @@ export default function ItemCards({ product }) {
   const { addToCart } = useContext(ShopProviderContext);
 
   const handleClick = () => {
-    addToCart(product.id);
+    addToCart(product.id, product.name, product.price);
   };
 
   return (
