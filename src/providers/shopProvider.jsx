@@ -15,36 +15,19 @@ export const ShopProvider = ({ children }) => {
       return [];
     }
   });
-  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-    // Calculate total price whenever cart changes
-    calculateTotalPrice();
   }, [cart]);
-
-  const calculateTotalPrice = () => {
-    let total = 0;
-    cart.forEach((item) => {
-      total += item.totalPrice;
-    });
-    setTotalPrice(total);
-  };
 
   const addToCart = (itemId, name, price) => {
     const itemIndex = cart.findIndex((item) => item.id === itemId);
-    const parsedPrice = parseFloat(price);
-
-    if (isNaN(parsedPrice)) {
-      console.error(`Invalid price: ${price}`);
-      return;
-    }
 
     if (itemIndex !== -1) {
       const updatedCart = [...cart];
       updatedCart[itemIndex].quantity += 1;
       updatedCart[itemIndex].totalPrice = (
-        updatedCart[itemIndex].quantity * parsedPrice
+        updatedCart[itemIndex].quantity * price
       ).toFixed(2);
       setCart(updatedCart);
       console.log(
@@ -54,20 +37,30 @@ export const ShopProvider = ({ children }) => {
       const newItem = {
         id: itemId,
         name: name,
-        price: parsedPrice,
+        price: price,
         quantity: 1,
-        totalPrice: parsedPrice.toFixed(2),
+        totalPrice: price.toFixed(2),
       };
       setCart([...cart, newItem]);
       console.log(`Item ${itemId} added to cart`);
     }
   };
 
+  const removeItem = (id) => {
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
   const value = {
     products,
     addToCart,
     cart,
-    totalPrice,
+    removeItem,
+    clearCart,
   };
 
   return (
