@@ -1,5 +1,6 @@
-import { useState, useContext, createContext } from "react";
-import data from "../data.json";
+import { useState, createContext } from "react";
+import PropTypes from "prop-types";
+import data from "../data";
 const clothes = data.clothes;
 
 export const ShopProviderContext = createContext();
@@ -13,7 +14,9 @@ export const ShopProvider = ({ children }) => {
     cartItems,
     setCartItems,
   };
-
+  ShopProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+  };
   return (
     <ShopProviderContext.Provider value={value}>
       {children}

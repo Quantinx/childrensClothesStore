@@ -1,0 +1,10 @@
+.body {
+  border: 2px solid black;
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

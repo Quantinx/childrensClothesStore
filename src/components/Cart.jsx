@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { ShopProviderContext } from "../providers/shopProvider";
-
+import { ShopProviderContext } from "../providers/ShopProvider";
 export default function Cart() {
   const { cartItems } = useContext(ShopProviderContext);
 
