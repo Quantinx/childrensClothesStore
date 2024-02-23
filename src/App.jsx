@@ -27,11 +27,8 @@ function App() {
     <>
       <Header />
       <Shop />
-<<<<<<< Updated upstream
       <Popup/>
-=======
       {showPopup && <NewsletterPopup closePopup={closePopup} />}
->>>>>>> Stashed changes
     </>
   );
 }
