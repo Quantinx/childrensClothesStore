@@ -12,10 +12,10 @@
 
 .newsletter-popup {
   background-color: white;
-  padding: 2.5rem;
+  padding: 0rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  max-width: 400px;
+  max-width: 63rem;
   position: relative;
   text-align: center;
 }
@@ -55,5 +55,31 @@
   margin-right: 5px;
 }
 
-.checkbox-container label {
+.popup-image img {
+  width: 50%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.popup-image {
+  width: 80%;
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.popup-content {
+  display: flex;
+  min-width: 60rem;
+  min-height: 25rem;
+  background-image: url(../../Assets/baby.png);
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.popup-text {
+  width: 70%;
+  padding: 1rem;
+  margin-left: 2.3rem;
 }
