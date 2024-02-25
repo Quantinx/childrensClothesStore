@@ -75,17 +75,16 @@
 }
 
 .popup-image {
-  width: 37%;
-  height: auto;
+  max-width: 45%;
 }
 
 .popup-content {
   display: flex;
-  min-width: 60rem;
+  max-width: 100%;
 }
 
 .popup-text {
-  width: 70%;
+  max-width: 70%;
   padding: 1.3rem;
   background-color: bisque;
 }
@@ -105,4 +104,78 @@ button[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* responsive */
+@media (max-width: 370px) {
+  .popup-content {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  .popup-image img {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .popup-image {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .popup-text {
+    max-width: 100%;
+    padding: 1rem;
+    background-color: bisque;
+  }
+
+  .newsletter-heading {
+    font-weight: bold;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .newsletter-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 927px) {
+  .popup-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  .popup-image img {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .popup-image {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .popup-text {
+    max-width: 100%;
+    padding: 1rem;
+    background-color: bisque;
+  }
+
+  .newsletter-heading {
+    font-weight: bold;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .newsletter-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
