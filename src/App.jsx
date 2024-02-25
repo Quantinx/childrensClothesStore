@@ -5,8 +5,6 @@ import Header from "./components/HeaderComponent/Header";
 import Shop from "./pages/ShopPage/Shop";
 import ProductPage from "./pages/ProductPage/ProductPage";
 
-import Popup from './components/Cart_Sidebar/Cart_Popup'
-
 function App() {
   return (
     <>
@@ -17,9 +15,6 @@ function App() {
           <Route path="/product/:productId" element={<ProductPage />} />
         </Routes>
       </ChakraProvider>
-      <Header />
-      <Shop />
-      <Popup/>
     </>
   );
 }
