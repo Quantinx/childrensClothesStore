@@ -3,70 +3,70 @@
     {
       "id": "1",
       "name": "Rainbow Striped T-shirt",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Colorful striped t-shirt made of soft cotton material.",
       "image": "/images/rainbow_tshirt.jpg"
     },
     {
       "id": "2",
       "name": "Denim Overalls",
-      "price": "$24.99",
+      "price": "24.99",
       "description": "Classic denim overalls with adjustable straps and pockets.",
       "image": "/images/denim_overalls.jpg"
     },
     {
       "id": "3",
       "name": "Unicorn Hoodie",
-      "price": "$19.99",
+      "price": "19.99",
       "description": "Adorable unicorn hoodie with a rainbow mane and horn.",
       "image": "/images/unicorn_hoodie.jpg"
     },
     {
       "id": "4",
       "name": "Polka Dot Dress",
-      "price": "$14.99",
+      "price": "14.99",
       "description": "Cute polka dot dress with a bow accent.",
       "image": "/images/polka_dot_dress.jpg"
     },
     {
       "id": "5",
       "name": "Dinosaur Pajamas",
-      "price": "$16.99",
+      "price": "16.99",
       "description": "Cozy pajama set featuring dinosaur prints.",
       "image": "/images/dinosaur_pajamas.jpg"
     },
     {
       "id": "6",
       "name": "Space Rocket Sweatshirt",
-      "price": "$18.99",
+      "price": "18.99",
       "description": "Fun sweatshirt featuring a space rocket design.",
       "image": "/images/space_rocket_sweatshirt.jpg"
     },
     {
       "id": "7",
       "name": "Striped Leggings",
-      "price": "$9.99",
+      "price": "9.99",
       "description": "Comfortable striped leggings for everyday wear.",
       "image": "/images/striped_leggings.jpg"
     },
     {
       "id": "8",
       "name": "Floral Skirt",
-      "price": "$13.99",
+      "price": "13.99",
       "description": "Pretty floral skirt with an elastic waistband.",
       "image": "/images/floral_skirt.jpg"
     },
     {
       "id": "9",
       "name": "Bear Onesie",
-      "price": "$22.99",
+      "price": "22.99",
       "description": "Cuddly bear onesie perfect for bedtime.",
       "image": "/images/bear_onesie.jpg"
     },
     {
       "id": "10",
       "name": "Raincoat with Hood",
-      "price": "$27.99",
+      "price": "27.99",
       "description": "Waterproof raincoat with a hood for rainy days.",
       "image": "/images/raincoat_with_hood.jpg"
     }
