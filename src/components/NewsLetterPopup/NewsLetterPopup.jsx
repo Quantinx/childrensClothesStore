@@ -45,10 +45,11 @@ const NewsletterPopup = () => {
               <div className="popup-text">
                 <h className="newsletter-heading">Subscribe & Save 20%!</h>
                 <p className='newsletter-paragraph'>
-                  Join Primark´s newsletter for exclusive offers, updates, and a 20%
+                  Join Primark´s newsletter for exclusive offers, new collections, exciting collabs and a 20%
                   discount on your first purchase!
                 </p>
                 <form onSubmit={handleSubmit}>
+                <label htmlFor="email">Email:</label>
                   <input
                     type="email"
                     placeholder="Your Email"

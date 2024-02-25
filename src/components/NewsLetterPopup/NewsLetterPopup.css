@@ -15,7 +15,8 @@
   padding: 0rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  max-width: 63rem;
+  max-width: 60rem;
+  height: auto;
   position: relative;
   text-align: center;
 }
@@ -64,28 +65,23 @@
 
 .checkbox-container input[type="checkbox"] {
   margin-right: 5px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .popup-image img {
-  width: 60%; /* Make the image fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 .popup-image {
-  width: 35%;
-}
-
-.popup-image img {
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 37%;
+  height: auto;
 }
 
 .popup-content {
   display: flex;
   min-width: 60rem;
-  min-height: 20rem;
 }
 
 .popup-text {
@@ -94,7 +90,7 @@
   background-color: bisque;
 }
 
-/* Add styles for the submit button */
+/* submit button */
 button[type="submit"] {
   background-color: #4caf50;
   color: white;
