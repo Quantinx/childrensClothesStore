@@ -51,12 +51,12 @@ const ContactForm = () => {
       </FormControl>
 
       <FormControl id="question" mb={4}>
-        <FormLabel>Your Question</FormLabel>
+        <FormLabel>Message</FormLabel>
         <Textarea
-          name="question"
+          name="message"
           value={formData.question}
           onChange={handleChange}
-          aria-label="Ask your question"
+          aria-label="Put your message or ask your question"
           resize="vertical"
           required
         />
