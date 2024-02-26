@@ -71,6 +71,11 @@
 
 .popup-image {
   max-width: 100%;
+  height: auto;
+}
+
+.popup-image img {
+  aspect-ratio: 17/22;
 }
 
 .popup-content {
@@ -79,7 +84,7 @@
 }
 
 .popup-text {
-  max-width: 100%;
+  max-width: 85%;
   padding: 1rem;
   background-color: bisque;
 }
