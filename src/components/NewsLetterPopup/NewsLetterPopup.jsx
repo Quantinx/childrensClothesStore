@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import './NewsLetterPopup.css';
-
+import { useState } from "react";
+import "./NewsLetterPopup.css";
 
 const NewsletterPopup = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [consentGiven, setConsentGiven] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
@@ -43,13 +42,14 @@ const NewsletterPopup = () => {
 
 
               <div className="popup-text">
-                <h className="newsletter-heading">Subscribe & Save 20%!</h>
-                <p className='newsletter-paragraph'>
-                  Join Primark´s newsletter for exclusive offers, new collections, exciting collabs and a 20%
-                  discount on your first purchase!
+                <h2 className="newsletter-heading">Subscribe & Save 20%!</h2>
+                <p className="newsletter-paragraph">
+                  Join Primark´s newsletter for exclusive offers, new
+                  collections, exciting collabs and a 20% discount on your first
+                  purchase!
                 </p>
                 <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Email:</label>
+                  <label htmlFor="email">Email:</label>
                   <input
                     type="email"
                     placeholder="Your Email"
