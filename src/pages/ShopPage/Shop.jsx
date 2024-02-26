@@ -1,20 +1,20 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom"; // Import Link
-import { ShopProviderContext } from "../../providers/ShopProvider"; // Adjust the import path as necessary
-import ItemCards from "../../components/ItemCardsComponent/ItemCards"; // Adjust the import path as necessary
-import "./Shop.css"; // Ensure the CSS path is correct
+import { Link } from "react-router-dom"; 
+import { ShopProviderContext } from "../../providers/ShopProvider"; 
+import ItemCards from "../../components/ItemCardsComponent/ItemCards"; 
+import "./Shop.css"; 
 
 export default function Shop() {
-  const { products } = useContext(ShopProviderContext); // Get products from context
+  const { products } = useContext(ShopProviderContext);
 
   return (
     <div className="Box">
       {products.map((product) => (
-        // Wrap each ItemCards component in a Link for navigation
+        
         <Link
-          to={`/product/${product.id}`} // Dynamic route based on product ID
+          to={`/product/${product.id}`} 
           key={product.id}
-          style={{ textDecoration: "none", color: "inherit" }} // Style to remove default link styling
+          style={{ textDecoration: "none", color: "inherit" }} // 
         >
           <ItemCards product={product} />
         </Link>

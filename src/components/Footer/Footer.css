@@ -1,0 +1,6 @@
+.contact-button-sticky {
+  position: fixed;
+  top: 98%;
+  right: 0;
+  transform: translateY(-50%);
+}
