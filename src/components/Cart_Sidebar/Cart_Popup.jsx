@@ -1,18 +1,17 @@
-import { useContext } from "react";
-import { usePopup } from "../../providers/useCartPopup";
-import { ShopProviderContext } from "../../providers/ShopProvider";
+import React, { useContext } from "react";
+import { useCartPopup2 } from "../../providers/useCartPopup2";
+import { ShopProvider2Context } from "../../providers/ShopProvider2";
 import "./Cart_Popup.css";
 
 const Popup = () => {
-  const { isOpen, togglePopup } = usePopup();
-  const { cartItems, removeItem, clearCart } = useContext(ShopProviderContext);
+  const { isOpen, togglePopup } = useCartPopup2();
+  const { cart, removeItem, clearCart } = useContext(ShopProvider2Context);
 
   const handleRemoveItem = (id) => {
     removeItem(id);
   };
 
-  console.log(cartItems);
-  const totalPrice = cartItems
+  const totalPrice = cart
     .reduce((total, item) => total + parseFloat(item.totalPrice), 0)
     .toFixed(2);
 
@@ -27,9 +26,9 @@ const Popup = () => {
         </div>
         <div>
           <ul>
-            {cartItems.map(({ id, name, quantity, totalPrice }) => (
+            {cart.map(({ id, name, quantity, totalPrice }) => (
               <li key={id}>
-                {quantity} x {name} = {`${totalPrice} SEK`}
+                {quantity} x {name} = {`${totalPrice} SEK`}{" "}
                 <button onClick={() => handleRemoveItem(id)}>
                   Remove Item
                 </button>
