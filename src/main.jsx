@@ -1,15 +1,19 @@
+import { BrowserRouter as Router } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import App from "./App";
-import { ShopProvider } from "./providers/ShopProvider";
+import App from "./App.jsx";
+import "./index.css";
+import { ShopProvider } from "./providers/ShopProvider.jsx";
+import { PopupProvider } from "./providers/useCartPopup.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <ShopProvider>
-        <App />
+        <PopupProvider>
+          <App />
+        </PopupProvider>
       </ShopProvider>
     </Router>
   </React.StrictMode>
