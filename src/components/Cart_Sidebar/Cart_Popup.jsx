@@ -11,6 +11,7 @@ const Popup = () => {
     removeItem(id);
   };
 
+  console.log(cartItems);
   const totalPrice = cartItems
     .reduce((total, item) => total + parseFloat(item.totalPrice), 0)
     .toFixed(2);

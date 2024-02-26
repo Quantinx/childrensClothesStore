@@ -6,7 +6,8 @@ import "./ItemCards.css";
 import { Button } from "@chakra-ui/react";
 
 export default function ItemCards({ product }) {
-  const { cartItems, setCartItems } = useContext(ShopProviderContext);
+  const { cartItems, setCartItems, addItemToCart } =
+    useContext(ShopProviderContext);
 
   ItemCards.propTypes = {
     product: PropTypes.shape({
@@ -19,8 +20,7 @@ export default function ItemCards({ product }) {
   };
 
   function onAdd() {
-    const newCart = addToCart(product.id, 1, cartItems);
-    setCartItems(newCart);
+    addItemToCart(product.id);
   }
   return (
     <article className="body">

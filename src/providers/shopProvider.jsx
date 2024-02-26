@@ -27,6 +27,7 @@ export const ShopProvider = ({ children }) => {
     setProducts,
     cartItems,
     addItemToCart,
+    setCartItems,
     removeItemFromCart,
     clearCart,
   };
