@@ -6,7 +6,7 @@ export default function Cart() {
 
   return (
     <>
-      <div> Cart: {cartItems}</div>
+      <div> Cart: {cartItems.length}</div>
     </>
   );
 }
