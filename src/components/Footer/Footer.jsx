@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react";
-import ContactForm from "./ContactForm"; // Import the ContactForm component
-import "./Footer.css"; // Import your Footer.css file for styling
+import ContactForm from "./ContactForm"; 
+import "./Footer.css"; 
 
 const Footer = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -32,14 +32,14 @@ const Footer = () => {
           <ModalHeader>Contact Us</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {/* Replace the existing content with the ContactForm component */}
+         
             <ContactForm />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={handleCloseModal}>
               Close
             </Button>
-            {/* You can add additional buttons or actions here if needed */}
+            
           </ModalFooter>
         </ModalContent>
       </Modal>

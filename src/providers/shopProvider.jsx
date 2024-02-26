@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import data from "../data.json"; // Adjust according to your project structure
+import data from "../data.json"; 
 import PropTypes from "prop-types";
 
 const clothes = data.clothes;

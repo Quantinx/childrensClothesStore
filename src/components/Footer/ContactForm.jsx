@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import {
   Button,
@@ -26,7 +24,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to a server
+    
     console.log("Form submitted:", formData);
   };
 
@@ -59,7 +57,7 @@ const ContactForm = () => {
       <FormControl id="question" mb={4}>
         <FormLabel>Message</FormLabel>
         <Textarea
-          name="message"
+          name="question"
           value={formData.question}
           onChange={handleChange}
           aria-label="Put your message or ask your question"
