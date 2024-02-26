@@ -8,10 +8,10 @@ const ProductPage = () => {
   const { productId } = useParams();
   const { products } = useContext(ShopProviderContext);
   const [product, setProduct] = useState(null);
-  const { cartItems, setCartItems } = useContext(ShopProviderContext);
+  const { cartItems, setCartItems, addItemToCart } =
+    useContext(ShopProviderContext);
   function handleClick() {
-    const newCart = addToCart(product.id, 1, cartItems);
-    setCartItems(newCart);
+    addItemToCart(product.id);
   }
 
   useEffect(() => {
