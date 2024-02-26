@@ -29,17 +29,16 @@ const NewsletterPopup = () => {
   return (
     <>
       {showPopup && (
-        <div className="modal-overlay">
+        <section className="modal-overlay">
           <div className="newsletter-popup">
             <button className="close-button" onClick={closePopup}>
               X
             </button>
 
             <div className="popup-content">
-            <div className="popup-image">
-  <img src='./src/assets/baby.webp' alt='picture of a baby smiling' />
-</div>
-
+              <div className="popup-image">
+                <img src='./src/assets/baby.webp' alt='picture of a baby smiling' />
+              </div>
 
               <div className="popup-text">
                 <h2 className="newsletter-heading">Subscribe & Save 20%!</h2>
@@ -78,7 +77,7 @@ const NewsletterPopup = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       )}
       {showMessage && (
         <div className="subscription-message">
