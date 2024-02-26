@@ -29,7 +29,7 @@ const Popup = () => {
           <ul>
             {cartItems.map(({ id, name, quantity, totalPrice }) => (
               <li key={id}>
-                {quantity} x {name} = {`${totalPrice} SEK`}{" "}
+                {quantity} x {name} = {`${totalPrice} SEK`}
                 <button onClick={() => handleRemoveItem(id)}>
                   Remove Item
                 </button>
