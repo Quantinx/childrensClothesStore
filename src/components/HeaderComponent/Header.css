@@ -1,14 +1,21 @@
-.Header {
+.header-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: rgb(224, 224, 224);
+  color: white;
 }
-h1 {
-  font-size: 4rem;
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
-.Cart {
-  display: flex;
-  justify-content: end;
-  padding-right: 5em;
-  margin-top: 15px;
+
+button:hover {
+  background-color: white;
+  color: #333;
 }

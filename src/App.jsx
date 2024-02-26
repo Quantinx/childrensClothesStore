@@ -19,7 +19,6 @@ function App() {
         </Routes>
         <Popup />
         <Footer />
-
         <NewsletterPopup />
       </ChakraProvider>
     </>

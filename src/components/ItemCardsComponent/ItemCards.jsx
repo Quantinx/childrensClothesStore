@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { ShopProviderContext } from "../../providers/ShopProvider";
-import addToCart from "../../helpers/addToCart";
+
+import { ShopProvider2Context } from "../../providers/ShopProvider2";
+
 import "./ItemCards.css";
 import { Button } from "@chakra-ui/react";
 
 export default function ItemCards({ product }) {
-  const { cartItems, setCartItems, addItemToCart } =
-    useContext(ShopProviderContext);
+  const { addToCart } = useContext(ShopProvider2Context);
 
   ItemCards.propTypes = {
     product: PropTypes.shape({
@@ -19,9 +19,10 @@ export default function ItemCards({ product }) {
     }).isRequired,
   };
 
-  function onAdd() {
-    addItemToCart(product.id);
-  }
+  const handleClick = () => {
+    addToCart(product.id, product.name, product.price);
+  };
+
   return (
     <article className="body">
       <h3>{product.name}</h3>
@@ -38,7 +39,7 @@ export default function ItemCards({ product }) {
         <Button
           onClick={(e) => {
             e.preventDefault();
-            onAdd(product.id);
+            handleClick();
           }}
           colorScheme="teal"
           size="md"
