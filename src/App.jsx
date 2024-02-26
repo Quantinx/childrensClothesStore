@@ -1,8 +1,6 @@
-// App.js
-
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Routes, Route } from "react-router-dom"; // Import Routes and Route
+import { Routes, Route } from "react-router-dom"; 
 import Header from "./components/HeaderComponent/Header";
 import Shop from "./pages/ShopPage/Shop";
 import ProductPage from "./pages/ProductPage/ProductPage";
