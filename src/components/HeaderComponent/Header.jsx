@@ -9,9 +9,9 @@ export default function Header() {
   const { togglePopup } = useCartPopup2();
 
   return (
-    <div className="header-container">
-      <h1>EXAMPLE SITE NAME</h1>
+    <header className="header-container">
+      <h1>Primark</h1>
       <button onClick={togglePopup}> {totalItems} Cart</button>
-    </div>
+    </header>
   );
 }
