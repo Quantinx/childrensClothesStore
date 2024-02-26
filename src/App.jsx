@@ -1,27 +1,30 @@
-import React from "react";
+import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom"; 
 import Header from "./components/HeaderComponent/Header";
 import Shop from "./pages/ShopPage/Shop";
 import ProductPage from "./pages/ProductPage/ProductPage";
+import Popup from "./components/Cart_Sidebar/Cart_Popup";
 import Footer from "./components/Footer/Footer";
 import NewsletterPopup from "./components/NewsLetterPopup/NewsLetterPopup";
 
 function App() {
   return (
-    <ChakraProvider>
-      <Header />
-      
-      <Routes>
-        <Route path="/" element={<Shop />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
-      </Routes>
-      
+    <>
+      <ChakraProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Shop />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+        </Routes>
+        <Popup />
       <Footer />
       
       <NewsletterPopup />
     </ChakraProvider>
   );
-}
+};
 
 export default App;
