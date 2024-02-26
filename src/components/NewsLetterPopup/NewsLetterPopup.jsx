@@ -38,7 +38,7 @@ const NewsletterPopup = () => {
 
             <div className="popup-content">
             <div className="popup-image">
-  <img src='./src/assets/baby.png' alt='girl' />
+  <img src='./src/assets/baby.webp' alt='picture of a baby smiling' />
 </div>
 
 
