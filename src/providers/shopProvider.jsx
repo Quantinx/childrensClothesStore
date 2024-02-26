@@ -1,27 +1,43 @@
-import React, { useState, createContext, useEffect } from "react";
-import data from "../data.json";
 import { useState, createContext } from "react";
+import data from "../data.json"; // Adjust according to your project structure
 import PropTypes from "prop-types";
-import data from "../data";
+
 const clothes = data.clothes;
 
 export const ShopProviderContext = createContext();
 
 export const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState(clothes);
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+
+  const addItemToCart = (item) => {
+    setCartItems((prevItems) => [...prevItems, item]);
+  };
+
+  const removeItemFromCart = (itemId) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const value = {
     products,
     setProducts,
     cartItems,
-    setCartItems,
+    addItemToCart,
+    removeItemFromCart,
+    clearCart,
   };
-  ShopProvider.propTypes = {
-    children: PropTypes.node.isRequired,
-  };
+
   return (
     <ShopProviderContext.Provider value={value}>
       {children}
     </ShopProviderContext.Provider>
   );
+};
+
+ShopProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
