@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Button, FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
+import {
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+} from "@chakra-ui/react";
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -66,13 +73,16 @@ const ContactForm = () => {
             />
           </FormControl>
 
-          <Button type="submit" colorScheme="teal">
+          <Button className="submit" type="submit" colorScheme="teal">
             Submit
           </Button>
         </form>
       ) : (
         <div>
-          <p>Thank you for contacting us, we will get back to you as soon as possible.</p>
+          <p>
+            Thank you for contacting us, we will get back to you as soon as
+            possible.
+          </p>
         </div>
       )}
     </div>

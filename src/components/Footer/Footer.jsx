@@ -1,9 +1,18 @@
 // Footer.js
 
-import React, { useState } from "react";
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, Button, Flex, Spacer } from "@chakra-ui/react";
-import ContactForm from "./ContactForm"; 
-import "./Footer.css"; 
+import { useState } from "react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  Button,
+  Flex,
+  Spacer,
+} from "@chakra-ui/react";
+import ContactForm from "./ContactForm";
+import "./Footer.css";
 
 const Footer = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -24,10 +33,14 @@ const Footer = () => {
             Contact Us
           </Button>
         </div>
-        
+
         <div className="copyright-info">
-          <p>&copy; {new Date().getFullYear()} Primark. All rights reserved.</p>
-          <p>1234 HyperIsland, Virkesvägen 2, 120 30 Stockholm</p> 
+          <p>
+            {" "}
+            {new Date().getFullYear()} Primark. All rights reserved.&copy; WE
+            HAVE NOTHING TO DO WITH PRIMARK! THIS IS EDUCATIONAL PURPOSE{" "}
+          </p>
+          <p>124 63 HyperIsland, Virkesvägen 2, 120 30 Stockholm</p>
         </div>
       </footer>
 
@@ -39,9 +52,7 @@ const Footer = () => {
               <Spacer />
               Contact Us
               <Spacer />
-              <Button onClick={handleCloseModal}>
-                X
-              </Button>
+              <Button onClick={handleCloseModal}>X</Button>
             </Flex>
           </ModalHeader>
           <ModalBody>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useCartPopup2 } from "../../providers/useCartPopup2";
 import { ShopProvider2Context } from "../../providers/ShopProvider2";
 import "./Cart_Popup.css";
@@ -16,36 +16,39 @@ const Popup = () => {
     .toFixed(2);
 
   return (
-    <div className={`popup ${isOpen ? "open" : ""}`}>
-      <button className="close-btn" onClick={togglePopup}>
-        X
-      </button>
-      <div className="popup-content">
+    <div className="popup-content">
+      <div className={`popup ${isOpen ? "open" : ""}`}>
         <div>
           <h2>Your Cart:</h2>
         </div>
-        <div>
-          <ul>
-            {cart.map(({ id, name, quantity, totalPrice }) => (
-              <li key={id}>
-                {quantity} x {name} = {`${totalPrice} SEK`}{" "}
-                <button onClick={() => handleRemoveItem(id)}>
-                  Remove Item
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p>Total price: {totalPrice} SEK</p>
-        </div>
+        <div className="space">
+          <div>
+            <ul>
+              {cart.map(({ id, name, quantity, totalPrice }) => (
+                <li key={id}>
+                  {quantity} x {name} = {`${totalPrice} SEK`}{" "}
+                  <button onClick={() => handleRemoveItem(id)}>
+                    Remove Item
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="price-and-button">
+            <div>
+              <p>Total price: {totalPrice} SEK</p>
+            </div>
 
-        <div>
-          <button>checkout</button>
-          <button onClick={clearCart}>Clear</button>
-          <button className="close-btn2" onClick={togglePopup}>
-            Close the cart
-          </button>
+            <div>
+              <button className="checkout-button">checkout</button>
+              <button className="clearcart" onClick={clearCart}>
+                Clear
+              </button>
+              <button className="close-btn2" onClick={togglePopup}>
+                Close the cart
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

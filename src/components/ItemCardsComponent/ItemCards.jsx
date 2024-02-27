@@ -34,9 +34,10 @@ export default function ItemCards({ product }) {
         width={200}
       ></img>
       <div>{product.description}</div>
-      <div className="price-button">
+      <div>
         {product.price}
         <Button
+          className="price-button"
           onClick={(e) => {
             e.preventDefault();
             handleClick();

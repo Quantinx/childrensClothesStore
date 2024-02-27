@@ -3,19 +3,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgb(224, 224, 224);
-  color: white;
-}
-
-button {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: white;
-  color: #333;
+  background-color: rgba(222, 222, 222, 0.576);
+  color: rgba(237, 16, 16, 0.536);
 }
