@@ -26,30 +26,32 @@ const ProductPage = () => {
 
   return (
     <>
-      <h2>{product.name}</h2>
-      <div className="Product">
-        <div>
-          <img
-            src={product.image}
-            alt={"image showing a" + product.name}
-            width={100}
-            height={100}
-          ></img>
-        </div>
-        <div>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
-          <Button
-            className="price-button"
-            onClick={(e) => {
-              e.preventDefault();
-              handleClick();
-            }}
-            colorScheme="teal"
-            size="md"
-          >
-            Add to Cart
-          </Button>
+      <div className="container">
+        <h2>{product.name}</h2>
+        <div className="Product">
+          <div>
+            <img
+              src={product.image}
+              alt={"image showing a" + product.name}
+              width={100}
+              height={100}
+            ></img>
+          </div>
+          <div>
+            <p>{product.description}</p>
+            <p>Price: {product.price}</p>
+            <Button
+              className="price-button"
+              onClick={(e) => {
+                e.preventDefault();
+                handleClick();
+              }}
+              colorScheme="teal"
+              size="md"
+            >
+              Add to Cart
+            </Button>
+          </div>
         </div>
       </div>
     </>

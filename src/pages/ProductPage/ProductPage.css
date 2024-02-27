@@ -6,7 +6,9 @@ h2 {
   color: #333;
   margin-top: 1rem;
 }
-
+.container {
+  height: 80vh;
+}
 .Product {
   display: flex;
   align-items: center;
@@ -61,7 +63,9 @@ button:hover {
     flex-direction: column;
     align-items: stretch;
   }
-
+  .container {
+    height: auto;
+  }
   .Product img {
     max-width: 90%;
     margin: 0 auto; /* Center image on small screens */

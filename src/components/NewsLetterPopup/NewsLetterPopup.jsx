@@ -7,6 +7,10 @@ const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
 
+  if (!showPopup) {
+    return <div>Loading...</div>;
+  }
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
