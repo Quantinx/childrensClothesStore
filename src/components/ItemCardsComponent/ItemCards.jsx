@@ -25,12 +25,9 @@ export default function ItemCards({ product }) {
   return (
     <article className="body">
       <h3>{product.name}</h3>
-      <img
-        src={product.image}
-        alt={"image showing a" + product.name}
-        width={100}
-        height={100}
-      ></img>
+      <div className="pics">
+        <img src={product.image} alt={"image showing a" + product.name}></img>
+      </div>
       <div>{product.description}</div>
       <div>
         {product.price}
