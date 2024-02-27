@@ -40,7 +40,7 @@ export default function ItemCards({ product }) {
           colorScheme="teal"
           size="md"
         >
-          BUY
+          Add to Cart
         </Button>
       </div>
     </article>

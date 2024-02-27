@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import "./ProductPage.css";
 import { ShopProvider2Context } from "../../providers/ShopProvider2";
+import { Button } from "@chakra-ui/react";
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -38,7 +39,17 @@ const ProductPage = () => {
         <div>
           <p>{product.description}</p>
           <p>Price: {product.price}</p>
-          <button onClick={handleClick}>Add to Cart</button>
+          <Button
+            className="price-button"
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick();
+            }}
+            colorScheme="teal"
+            size="md"
+          >
+            Add to Cart
+          </Button>
         </div>
       </div>
     </>
