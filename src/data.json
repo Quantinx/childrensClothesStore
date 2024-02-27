@@ -5,70 +5,70 @@
       "name": "Rainbow Striped T-shirt",
       "price": "12.99",
       "description": "Colorful striped t-shirt made of soft cotton material.",
-      "image": "/assets/clothes/rainbowsweatshirt.webp"
+      "image": "/clothes/rainbowsweatshirt.webp"
     },
     {
       "id": "2",
       "name": "Denim Overalls",
       "price": "24.99",
       "description": "Classic denim overalls with adjustable straps and pockets.",
-      "image": "/assets/clothes/denimoveralls.webp"
+      "image": "/clothes/denimoveralls.webp"
     },
     {
       "id": "3",
       "name": "Unicorn Hoodie",
       "price": "19.99",
       "description": "Adorable unicorn hoodie with a rainbow mane and horn.",
-      "image": "/assets/clothes/unicornhoodie.webp"
+      "image": "/clothes/unicornhoodie.webp"
     },
     {
       "id": "4",
       "name": "Polka Dot Dress",
       "price": "14.99",
       "description": "Cute polka dot dress with a bow accent.",
-      "image": "/assets/clothes/heartpolkadress.webp"
+      "image": "/clothes/heartpolkadress.webp"
     },
     {
       "id": "5",
       "name": "Dinosaur Pajamas",
       "price": "16.99",
       "description": "Cozy pajama set featuring dinosaur prints.",
-      "image": "/assets/clothes/dinasourpajama.webp"
+      "image": "/clothes/dinasourpajama.webp"
     },
     {
       "id": "6",
       "name": "Space Rocket Sweatshirt",
       "price": "18.99",
       "description": "Fun sweatshirt featuring a space rocket design.",
-      "image": "/assets/clothes/spacesweatshirt.webp"
+      "image": "/clothes/spacesweatshirt.webp"
     },
     {
       "id": "7",
       "name": "Striped Leggings",
       "price": "9.99",
       "description": "Comfortable striped leggings for everyday wear.",
-      "image": "/assets/clothes/strippedleggings.webp"
+      "image": "/clothes/strippedleggings.webp"
     },
     {
       "id": "8",
       "name": "Floral Skirt",
       "price": "13.99",
       "description": "Pretty floral skirt with an elastic waistband.",
-      "image": "/assets/clothes/flowerskirt.webp"
+      "image": "/clothes/flowerskirt.webp"
     },
     {
       "id": "9",
       "name": "Bear Onesie",
       "price": "22.99",
       "description": "Cuddly bear onesie perfect for bedtime.",
-      "image": "//assets/clothes/bearoverall.webp"
+      "image": "/clothes/bearoverall.webp"
     },
     {
       "id": "10",
       "name": "Raincoat with Hood",
       "price": "27.99",
       "description": "Waterproof raincoat with a hood for rainy days.",
-      "image": "/assets/clothes/raincoat.webp"
+      "image": "/clothes/raincoat.webp"
     }
   ]
 }
