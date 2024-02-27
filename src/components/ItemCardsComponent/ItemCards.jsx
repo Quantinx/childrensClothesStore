@@ -30,7 +30,7 @@ export default function ItemCards({ product }) {
           src={product.image}
           alt={"image showing a" + product.name}
           width={200}
-          height={200}
+          height={300}
           loading="lazy"
         ></img>
       </div>

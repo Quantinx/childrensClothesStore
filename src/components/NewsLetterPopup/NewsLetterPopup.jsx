@@ -44,8 +44,8 @@ const NewsletterPopup = () => {
                 <img
                   src="wk.webp"
                   alt="picture of a baby smiling"
-                  width={200}
-                  height={200}
+                  width={2001}
+                  height={573}
                 />
               </div>
 
