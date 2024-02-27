@@ -10,7 +10,7 @@ import NewsletterPopup from "./components/NewsLetterPopup/NewsLetterPopup";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <ChakraProvider>
         <Header />
         <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Footer />
         <NewsletterPopup />
       </ChakraProvider>
-    </>
+    </div>
   );
 }
 

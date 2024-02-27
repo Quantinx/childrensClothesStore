@@ -28,19 +28,14 @@ const Footer = () => {
   return (
     <>
       <footer className="Footer">
+        <div className="copyright-info">
+          <p>124 63 HyperIsland, Virkesvägen 2, 120 30 Stockholm</p>
+          <p> {new Date().getFullYear()} Primark. All rights reserved.&copy;</p>
+        </div>
         <div className="contact-button-sticky">
           <Button colorScheme="teal" onClick={handleContactButtonClick}>
             Contact Us
           </Button>
-        </div>
-
-        <div className="copyright-info">
-          <p>
-            {" "}
-            {new Date().getFullYear()} Primark. All rights reserved.&copy; WE
-            HAVE NOTHING TO DO WITH PRIMARK! THIS IS EDUCATIONAL PURPOSE{" "}
-          </p>
-          <p>124 63 HyperIsland, Virkesvägen 2, 120 30 Stockholm</p>
         </div>
       </footer>
 

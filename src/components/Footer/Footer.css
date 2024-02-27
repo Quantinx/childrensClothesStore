@@ -8,3 +8,22 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .copyright-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+}

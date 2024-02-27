@@ -5,70 +5,70 @@
       "name": "Rainbow Striped T-shirt",
       "price": "12.99",
       "description": "Colorful striped t-shirt made of soft cotton material.",
-      "image": "/clothes/rainbowsweatshirt.webp"
+      "image": "/public/assets/clothes/rainbowsweatshirt.webp"
     },
     {
       "id": "2",
       "name": "Denim Overalls",
       "price": "24.99",
       "description": "Classic denim overalls with adjustable straps and pockets.",
-      "image": "/clothes/denimoveralls.webp"
+      "image": "/public/assets/clothes/denimoveralls.webp"
     },
     {
       "id": "3",
       "name": "Unicorn Hoodie",
       "price": "19.99",
       "description": "Adorable unicorn hoodie with a rainbow mane and horn.",
-      "image": "/clothes/unicornhoodie.webp"
+      "image": "/public/assets/clothes/unicornhoodie.webp"
     },
     {
       "id": "4",
       "name": "Polka Dot Dress",
       "price": "14.99",
       "description": "Cute polka dot dress with a bow accent.",
-      "image": "/clothes/heartpolkadress.webp"
+      "image": "/public/assets/clothes/heartpolkadress.webp"
     },
     {
       "id": "5",
       "name": "Dinosaur Pajamas",
       "price": "16.99",
       "description": "Cozy pajama set featuring dinosaur prints.",
-      "image": "/clothes/dinasourpajama.webp"
+      "image": "/public/assets/clothes/dinasourpajama.webp"
     },
     {
       "id": "6",
       "name": "Space Rocket Sweatshirt",
       "price": "18.99",
       "description": "Fun sweatshirt featuring a space rocket design.",
-      "image": "/clothes/spacesweatshirt.webp"
+      "image": "/public/assets/clothes/spacesweatshirt.webp"
     },
     {
       "id": "7",
       "name": "Striped Leggings",
       "price": "9.99",
       "description": "Comfortable striped leggings for everyday wear.",
-      "image": "/clothes/strippedleggings.webp"
+      "image": "/public/assets/clothes/strippedleggings.webp"
     },
     {
       "id": "8",
       "name": "Floral Skirt",
       "price": "13.99",
       "description": "Pretty floral skirt with an elastic waistband.",
-      "image": "/clothes/flowerskirt.webp"
+      "image": "/public/assets/clothes/flowerskirt.webp"
     },
     {
       "id": "9",
       "name": "Bear Onesie",
       "price": "22.99",
       "description": "Cuddly bear onesie perfect for bedtime.",
-      "image": "/clothes/bearoverall.webp"
+      "image": "/public/assets/clothes/bearoverall.webp"
     },
     {
       "id": "10",
       "name": "Raincoat with Hood",
       "price": "27.99",
       "description": "Waterproof raincoat with a hood for rainy days.",
-      "image": "/clothes/raincoat.webp"
+      "image": "/public/assets/clothes/raincoat.webp"
     }
   ]
 }
