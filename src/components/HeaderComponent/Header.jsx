@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <Box as="header" className="header-container">
-      <Link to="/">
+      <Link rel="preload" to="/">
         <Text
           as="h1"
           fontSize="40px"

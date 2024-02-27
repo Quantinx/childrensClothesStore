@@ -26,7 +26,13 @@ export default function ItemCards({ product }) {
     <article className="body">
       <h3>{product.name}</h3>
       <div className="pics">
-        <img src={product.image} alt={"image showing a" + product.name}></img>
+        <img
+          src={product.image}
+          alt={"image showing a" + product.name}
+          width={200}
+          height={200}
+          loading="lazy"
+        ></img>
       </div>
       <div>{product.description}</div>
       <div>
