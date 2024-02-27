@@ -3,8 +3,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-image: url("./public/assets/wk.webp");
+  background-image: url("../public/assets/wk.webp");
   background-size: cover;
   background-position: center;
-  color: rgba(237, 16, 16, 0.536);
+  color: rgba(0, 0, 0, 0.536);
+}
+.head {
+  padding-left: 500px;
+}
+@media (max-width: 768px) {
+  .head {
+    padding-left: 0;
+    padding: 0px 15px;
+    background-color: rgba(255, 145, 255, 0.536);
+    border-radius: 50%;
+  }
 }

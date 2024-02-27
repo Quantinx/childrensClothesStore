@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import "./ProductPage.css";
-
 import { ShopProvider2Context } from "../../providers/ShopProvider2";
 
 const ProductPage = () => {
@@ -29,7 +28,12 @@ const ProductPage = () => {
       <h2>{product.name}</h2>
       <div className="Product">
         <div>
-          <img src={product.image} alt={product.name} />
+          <img
+            src={product.image}
+            alt={"image showing a" + product.name}
+            width={100}
+            height={100}
+          ></img>
         </div>
         <div>
           <p>{product.description}</p>

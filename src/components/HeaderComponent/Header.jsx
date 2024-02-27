@@ -13,8 +13,14 @@ export default function Header() {
   return (
     <Box as="header" className="header-container">
       <Link to="/">
-        <Text as="h1" fontSize="30px" fontWeight="bold" color="red">
-          Primark
+        <Text
+          as="h1"
+          fontSize="40px"
+          fontWeight="bold"
+          color="black"
+          className="head"
+        >
+          Frimark
         </Text>
       </Link>
       <Button colorScheme="salmon" onClick={togglePopup}>

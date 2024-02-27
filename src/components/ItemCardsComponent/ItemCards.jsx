@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-
 import { ShopProvider2Context } from "../../providers/ShopProvider2";
 
 import "./ItemCards.css";
@@ -29,8 +28,8 @@ export default function ItemCards({ product }) {
       <img
         src={product.image}
         alt={"image showing a" + product.name}
-        width={200}
-        height={200}
+        width={100}
+        height={100}
       ></img>
       <div>{product.description}</div>
       <div>
