@@ -7,6 +7,10 @@ const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
 
+  if (!showPopup) {
+    return <div>Loading...</div>;
+  }
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -38,10 +42,10 @@ const NewsletterPopup = () => {
             <div className="popup-content">
               <div className="popup-image">
                 <img
-                  src="./assets/wk.webp"
+                  src="wk.webp"
                   alt="picture of a baby smiling"
-                  width={200}
-                  height={200}
+                  width={2001}
+                  height={573}
                 />
               </div>
 

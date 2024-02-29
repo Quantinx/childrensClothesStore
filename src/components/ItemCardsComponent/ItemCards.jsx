@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-
 import { ShopProvider2Context } from "../../providers/ShopProvider2";
 
 import "./ItemCards.css";
@@ -26,12 +25,15 @@ export default function ItemCards({ product }) {
   return (
     <article className="body">
       <h3>{product.name}</h3>
-      <img
-        src={product.image}
-        alt={"image showing a" + product.name}
-        width={200}
-        height={200}
-      ></img>
+      <div className="pics">
+        <img
+          src={product.image}
+          alt={"image showing a" + product.name}
+          width={200}
+          height={300}
+          loading="lazy"
+        ></img>
+      </div>
       <div>{product.description}</div>
       <div>
         {product.price}
@@ -44,7 +46,7 @@ export default function ItemCards({ product }) {
           colorScheme="teal"
           size="md"
         >
-          BUY
+          Add to Cart
         </Button>
       </div>
     </article>
